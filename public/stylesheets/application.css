@@ -1,0 +1,23 @@
+#sudoku { /* '#' means it is an id attribute, not a class */
+  font-size: 0;
+  text-align: center;
+}
+
+body {
+  text-align: center;
+  font-family: Arial;
+}
+
+div.box {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+div.cell {
+  display: inline-block;
+}
+
+.cell input { /* no dot in front of element name means it is a tag, not a class */
+  width: 30px;
+  height: 30px;
+}
