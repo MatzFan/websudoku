@@ -10,6 +10,11 @@ body {
   font-size: 30px
 }
 
+li {
+  text-indent: 100px;
+  text-align: left;
+}
+
 div.box {
   margin: 1px;
   display: inline-block;
