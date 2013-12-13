@@ -1,4 +1,7 @@
 # spec/spec_helper.rb
+ENV['RACK_ENV'] = 'test'
+
+
 require 'rack/test'
 
 require File.expand_path '../../sudoku.rb', __FILE__

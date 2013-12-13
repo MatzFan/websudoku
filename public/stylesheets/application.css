@@ -21,3 +21,11 @@ div.cell {
   width: 30px;
   height: 30px;
 }
+
+.incorrect {
+  background-color: yellow;
+}
+
+.value-provided {
+  background-color: #DDD;
+}
