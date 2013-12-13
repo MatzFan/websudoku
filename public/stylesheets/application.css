@@ -7,11 +7,13 @@ body {
   text-align: center;
   background-color: #FFCCFF;
   font-family: Arial;
+  font-size: 30px
 }
 
 div.box {
+  margin: 1px;
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid blue;
 }
 
 div.cell {
@@ -19,8 +21,13 @@ div.cell {
 }
 
 .cell input { /* no dot in front of element name means it is a tag, not a class */
-  width: 30px;
-  height: 30px;
+  border: 1px solid blue;
+  background-color: #FFCDDF;
+  font-size: 30px ;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+
 }
 
 .incorrect {
@@ -33,4 +40,11 @@ div.cell {
 
 #flash {
   margin: 20px;
+}
+
+button {
+  background-color: #A3E1D8;
+  color: blue;
+  font-size: 20px;
+  border-radius:25px;
 }
