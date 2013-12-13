@@ -20,22 +20,20 @@ div.cell {
   display: inline-block;
 }
 
-.cell input { /* no dot in front of element name means it is a tag, not a class */
-  border: 1px solid blue;
-  background-color: #FFCDDF;
-  font-size: 30px ;
-  text-align: center;
-  width: 60px;
-  height: 60px;
-
-}
-
 .incorrect {
   background-color: yellow;
 }
 
 .value-provided {
-  background-color: #DDD;
+  background-color: #FFCDDF;
+}
+
+.cell input { /* no dot in front of element name means it is a tag, not a class */
+  border: 1px solid blue;
+  font-size: 30px ;
+  text-align: center;
+  width: 60px;
+  height: 60px;
 }
 
 #flash {
