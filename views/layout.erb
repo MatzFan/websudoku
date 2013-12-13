@@ -9,5 +9,8 @@
   <body>
     <h1>Life is too short for writing Sudoku apps</h1>
     <%= yield %>
+    <div id="flash">
+      <%= flash[:notice] %>
+    </div>
   </body>
 </html>

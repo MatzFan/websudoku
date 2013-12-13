@@ -3,7 +3,10 @@ source "https://rubygems.org"
 ruby '2.0.0'
 
 gem "sinatra"
+gem 'sinatra-partial'
 gem "shotgun"
+gem 'newrelic_rpm'
+gem 'rack-flash3'
 
 group :development do
   gem "rspec"

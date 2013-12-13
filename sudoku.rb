@@ -1,11 +1,23 @@
 #!/usr/bin/env ruby
 
-require 'sinatra'
 require_relative './lib/sudoku'
 require_relative './lib/cell'
 require './helpers/application'
+require 'sinatra'
+require 'sinatra/partial'
+  set :partial_template_engine, :erb
+require 'rack-flash'
+  use Rack::Flash
+
+configure :production do
+  require 'newrelic_rpm'
+end
+
+set :session_secret, "I'm the secret key to sign the cookie"
 
 enable :sessions unless test?
+
+include Helpers # in /helper/application
 
 def random_sudoku
   seed = (1..9).to_a.shuffle + Array.new(81-9, 0)
@@ -16,6 +28,10 @@ end
 
 def prepare_to_check_solution
   @check_solution = session[:check_solution]
+  if @check_solution
+    # flash notification
+    flash[:notice] = "Incorrect values are highlighted in yellow"
+  end
   session[:check_solution] = nil
 end
 
