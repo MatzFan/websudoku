@@ -75,5 +75,6 @@ get '/solution' do
   @current_solution = session[:solution]
   @solution = session[:solution]
   @puzzle = session[:puzzle]
+  session[:check_solution] = nil
   erb :index
 end
